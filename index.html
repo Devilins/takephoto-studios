@@ -414,7 +414,7 @@ function routeIcon(){
 
 function render(list){
   grid.innerHTML = list.map((loc, i) => {
-    const query = encodeURIComponent(`${loc.address}, Москва, ${loc.mall}`);
+    const query = encodeURIComponent(`${loc.address}, ${loc.mall}`);
     const mapUrl = `https://yandex.ru/maps/?text=${query}`;
     return `
       <div class="card" style="animation-delay:${Math.min(i * 0.06, 0.4)}s">
